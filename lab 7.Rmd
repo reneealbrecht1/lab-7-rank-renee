@@ -51,3 +51,19 @@ mwu_kermit
 
 ```
 
+Collaborator:
+
+Compare the pre and post talk ranks
+
+Is there a significant difference in Kermit ranks for pre-talk and post-talk scores?
+
+```{r}
+#H0 : no difference in ranks between pre and post talk kermit appreciation
+#HA : difference in ranks between pre and post talk kermiet appreciation
+
+wsr_kermit = wilcox.test(kermit$Score.pre, kermit$Score.post, paired = TRUE)
+wsr_kermit
+
+# There is no significant difference in kermit rankings before and after his talk (summary...)
+```
+
