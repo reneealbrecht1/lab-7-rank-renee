@@ -10,3 +10,28 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Hi it's Renee! I created this repo and markdown document!! 
+
+Hey it's Madeline! Always happy to kelp out
+
+I'm going to make some histograms
+```{r}
+library(tidyverse)
+kermit = read_csv("kermit.csv")
+View(kermit)
+
+#going to ask if there is a significant difference in ranks in male and female students. 
+#Is there a significant difference in pre and post ranks. 
+
+```
+
+```{r}
+#Making a histogram
+
+kermit_hist = ggplot(kermit, aes(x = Score.pre))+
+  geom_histogram()+
+  facet_wrap(~ Gender)+
+  theme_classic()
+
+kermit_hist
+```
+
